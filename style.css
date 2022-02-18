@@ -7,3 +7,42 @@
 img {
   max-width: 100%;
 }
+
+.logo {
+  width: 340px; /* konkretisering af logoets størrelse  */
+  cursor: pointer; /* så musen fortæller brugeren af elementet er klikbart  */
+}
+
+/* placere logoet */
+.navbar img {
+  margin-left: 163%;
+  padding-top: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li {
+  display: inline-block; /* prikker forsvinder fra tekst  */
+  padding: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none; /* linje forsvinder  */
+  color: black;
+}
+
+/* de to billeder */
+.kolonne {
+  display: flex;
+  gap: 5rem;
+  padding: 5rem;
+}
