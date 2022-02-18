@@ -13,9 +13,45 @@
       src="https://kit.fontawesome.com/e076e3f476.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- CSS STYLE -->
+    <style>
+      .element2_om {
+        display: flex;
+        align-content: space-around;
+      }
+
+      footer {
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 600px) {
+        .section_wrapper1_om {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .element2_om {
+          justify-content: center;
+        }
+
+        .section_wrapper2_om h3 {
+          text-align: center;
+        }
+
+        .element3_om {
+          display: flex;
+          justify-content: center;
+        }
+        .section_wrapper_footer {
+          display: flex;
+          justify-items: space-evenly;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Navigationsmenu -->
+
     <header>
       <!-- Logo -->
       <div class="logo">
@@ -43,7 +79,6 @@
       <!-- Section 1, informationsgivende tekst om KøbenIs' historie og opstandelse -->
       <section id="section1_om">
         <div class="section_wrapper1_om">
-          <img src="" alt="" />
           <div class="element1_om">
             <h2>Hvem er KøbenIs?</h2>
             <h3>Iselskere med hjertet på rette sted</h3>
@@ -54,22 +89,55 @@
               beatae facilis.
             </p>
           </div>
+          <img src="/billeder/billede6.jpg" alt="Isdisk" />
         </div>
 
         <!-- Billedgrid -->
         <div class="section_wrapper2_om">
+          <h3>Følg med os på Instagram</h3>
           <div class="element2_om">
-            <h3>Følg med os på Instagram</h3>
+            <i class="fa-brands fa-instagram fa-2x"></i>
+            <p>@KoebenIs</p>
           </div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <div class="element3_om">
+            <img src="/billeder/billede5.jpg" alt="Is" />
+            <img src="/billeder/billede8.jpg" alt="Is" />
+            <img src="/billeder/baad.jpg" alt="Båd" />
+          </div>
         </div>
       </section>
     </main>
     <!-- Footer med kontakt, adresse og SOME -->
     <footer>
-      <script src="script.js"></script>
+      <section>
+        <div class="section_wrapper_footer">
+          <div>
+            <h3>Kontakt os</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit
+              iste facere pariatur ex autem dolore placeat, architecto harum
+              possimus reprehenderit eius laborum tempore consectetur cumque
+              eligendi similique a optio.
+            </p>
+          </div>
+          <div>
+            <h3>Find os</h3>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis vitae quaerat at saepe, rerum suscipit consectetur
+              odit maiores sit pariatur eum officia praesentium asperiores culpa
+              veritatis labore iste. Eaque, saepe!
+            </p>
+          </div>
+          <div>
+            <h3>Følg os</h3>
+            <i class="fa-brands fa-instagram fa-2x"></i>
+            <i class="fa-brands fa-facebook-f fa-2x"></i>
+          </div>
+        </div>
+      </section>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
