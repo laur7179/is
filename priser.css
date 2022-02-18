@@ -1,0 +1,8 @@
+@media (min-width: 700px) {
+  #section1 .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 35px;
+    gap: 15px;
+  }
+}
