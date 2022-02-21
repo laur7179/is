@@ -5,58 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      /* diverse styling */
 
-      .is_container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 1rem;
-      }
-
-      #modal {
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        background-color: #00000055;
-      }
-
-      #modal article {
-        max-width: 900px;
-        margin: auto;
-        background-color: white;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      #modal article img {
-        grid-column: 2/3;
-        max-width: 10rem;
-      }
-
-      #modal article h2 {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-
-      #modal article p {
-        grid-column: 1/2;
-        grid-row: 2/3;
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
     <aside id="modal">
       <article>
         <img src="" alt="" />
         <h2></h2>
-        <p></p>
+        <p class="modal"></p>
         <p></p>
         <p></p>
       </article>
@@ -72,8 +29,29 @@
         </div>
       </article>
     </template>
+
     <header>
-      <h1>Købenis (placeholder)</h1>
+      <div class="logo_wrapper">
+        <div class="logo">
+          <a href="index.html"><img src="billeder/logo.svg" alt="" /></a>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li class="nav-item"><a href="menu.html">Vores is</a></li>
+          <li class="nav-item"><a href="om.html">Om KøbenIs</a></li>
+          <li class="nav-item">
+            <a href="https://ordnet.dk/ddo/ordbog?query=overfl%C3%B8dig"
+              >Vores priser</a
+            >
+          </li>
+          <li class="nav-item"><a href="produktion.html">Produktion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
       <div class="filtermenu">
         <nav>
           <button class="filter" data-isen="alle">Alle is</button>
@@ -82,8 +60,6 @@
           <button class="filter" data-isen="Softice">Softice</button>
         </nav>
       </div>
-    </header>
-    <main>
       <h1 class="type"></h1>
       <section class="is_container"></section>
     </main>
@@ -119,9 +95,9 @@
           if (filterIs == "alle" || filterIs == isen.type) {
             let clone = template.cloneNode(true).content;
             clone.querySelector(".isnavn").textContent = isen.smag;
-            clone.querySelector(".beskrivelse").textContent = isen.beskrivelse;
+            // clone.querySelector(".beskrivelse").textContent = isen.beskrivelse;
             clone.querySelector(".øko").textContent = isen.øko;
-            clone.querySelector(".fundament").textContent = isen.fundament;
+            // clone.querySelector(".fundament").textContent = isen.fundament;
             clone.querySelector("img").src = billedeUrl + isen.billede;
             clone
               .querySelector("img")
@@ -160,5 +136,6 @@
       // Hvordan får jeg mit modal til at se bedre ud?
       //
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
