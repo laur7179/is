@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* diverse styling */
+
+      .is_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1rem;
+      }
+
+      #modal {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: #00000055;
+      }
+
+      #modal article {
+        max-width: 900px;
+        margin: auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #modal article img {
+        grid-column: 2/3;
+        max-width: 10rem;
+      }
+
+      #modal article h2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+
+      #modal article p {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <aside id="modal">
+      <article>
+        <img src="" alt="" />
+        <h2></h2>
+        <p></p>
+        <p></p>
+        <p></p>
+      </article>
+    </aside>
+    <template>
+      <article>
+        <img src="is/" alt="" />
+        <div>
+          <h2 class="isnavn"></h2>
+          <p class="beskrivelse"></p>
+          <p class="fundament"></p>
+          <p class="øko"></p>
+        </div>
+      </article>
+    </template>
+    <header>
+      <h1>Købenis (placeholder)</h1>
+      <div class="filtermenu">
+        <nav>
+          <button class="filter" data-isen="alle">Alle is</button>
+          <button class="filter" data-isen="Sorbet">Sorbet</button>
+          <button class="filter" data-isen="Flødeis*">Flødeis</button>
+          <button class="filter" data-isen="Softice">Softice</button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="type"></h1>
+      <section class="is_container"></section>
+    </main>
+    <footer></footer>
+    <script>
+      let is;
+      let modal = document.querySelector("#modal");
+      let billedeUrl = "is/";
+      let container = document.querySelector(".is_container");
+      let template = document.querySelector("template");
+      const dbUrl = "https://koebenis-0421.restdb.io/rest/icecream";
+      const key = "620f7cb134fd6215658587c5";
+      let filterIs = "alle";
+
+      async function getJson() {
+        const data = await fetch(dbUrl, {
+          method: "GET",
+          headers: {
+            "Content-type": "apllication/json",
+            "x-apikey": key,
+            "cache-control": "no-cache",
+          },
+        });
+        is = await data.json();
+        console.log(is, "test");
+        showIce();
+        addBtn();
+      }
+
+      function showIce() {
+        container.innerHTML = "";
+        is.forEach((isen) => {
+          if (filterIs == "alle" || filterIs == isen.type) {
+            let clone = template.cloneNode(true).content;
+            clone.querySelector(".isnavn").textContent = isen.smag;
+            clone.querySelector(".beskrivelse").textContent = isen.beskrivelse;
+            clone.querySelector(".øko").textContent = isen.øko;
+            clone.querySelector(".fundament").textContent = isen.fundament;
+            clone.querySelector("img").src = billedeUrl + isen.billede;
+            clone
+              .querySelector("img")
+              .addEventListener("click", () => showDetails(isen));
+            container.appendChild(clone);
+          }
+        });
+      }
+
+      function addBtn() {
+        document.querySelectorAll(".filtermenu button").forEach((btn) => {
+          btn.addEventListener("click", filter);
+        });
+      }
+
+      function filter() {
+        filterIs = this.dataset.isen;
+        document.querySelector(".type").textContent = this.textContent;
+        showIce();
+        console.log("knap");
+      }
+
+      function showDetails(isen) {
+        console.log(isen);
+        modal.querySelector("h2").textContent = isen.smag;
+        modal.querySelector("img").src = billedeUrl + isen.billede;
+        modal.querySelector("p").textContent = isen.beskrivelse;
+        modal.style.display = "block";
+      }
+
+      modal.addEventListener("click", () => (modal.style.display = "none"));
+
+      getJson();
+
+      // Hvordan får jeg elementerne i forskellig størrelse til at lægge sig på en lige linje i bunden?
+      // Hvordan får jeg mit modal til at se bedre ud?
+      //
+    </script>
+  </body>
+</html>
