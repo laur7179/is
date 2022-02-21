@@ -15,9 +15,11 @@ img {
 }
 
 /* placere logoet */
-.navbar img {
-  margin-left: 163%;
-  padding-top: 1.5rem;
+
+.logo_wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
 .menu {
