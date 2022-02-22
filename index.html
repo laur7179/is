@@ -26,12 +26,58 @@
   background-image: url(billeder/splash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center
         }
 
-        /* section 2 "vores is" + "vores historie" */
 
+/* Section 3 */
+        /* Placering af billeder og tekst i center af flex-elementet (colonne aka. .col) */
+      .section_wrapper_forside2 .col_1, .section_wrapper_forside2 .col_2, .section_wrapper_forside2 .col_3{
+            display: grid;
+            place-items: center;
+            
+        }
+/* Størrelse på de runde billeder */
+        .section_wrapper_forside2 img{
+            width: 50%;
+            
+        }
+
+        /* Button styling på forside (links i button, derfor er de lavet med div+class) */
+.button {
+  background-color: #93bf50; /* Green darker */
+  border: none;
+  color: white;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+.button:focus {
+  background-color: #bcdd7b; /* Green lighter */
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* Web version */
+@media (min-width: 600px) {
+
+        /* section 2 "vores is" + "vores historie" */
         .section_wrapper_forside1{
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .section_wrapper_forside1 img{
+          width: 75%;
         }
 
 
@@ -42,18 +88,10 @@
             gap: 2rem;
         }
 
-        /* Placering af billeder og tekst i center af flex-elementet (colonne aka. .col) */
-        .section_wrapper_forside2 .col_1, .section_wrapper_forside2 .col_2, .section_wrapper_forside2 .col_3{
-            display: grid;
-            place-items: center;
-            
-        }
+        
+      }
 
-/* Størrelse på de runde billeder */
-        .section_wrapper_forside2 img{
-            width: 50%;
-            
-        }
+
     </style>
 </head>
 <body>
@@ -81,30 +119,35 @@
         <section id="section_2">
             <div class="section_wrapper_forside1">
                 <div class="col_1">
-                    <img src="" alt="">
+                  
+                    <img src="billeder/voresis.jpg" alt="Isdisk">
+                 
+                    
                     <h2>Vores is</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ullam nostrum, vero in molestiae porro? Molestias illo autem earum. Illo alias adipisci nam hic assumenda excepturi ea debitis dolores. Consequatur.</p>
-                    <div class="butt">
+                    
                         <div class="button">
                           <a
                             href="https://xd.adobe.com/view/58bcd6f5-d2d6-4be2-b775-a5edb99b587b-0def/screen/26509945-56eb-4d13-b2fc-be1a243f00ec"
                             >Se alle vores is</a
                           >
                         </div>
-                    </div>
+                    
                 </div>
                         <div class="col_2">
-                            <img src="" alt="">
+                          
+                            <img src="billeder/voresis.jpg" alt="Isdisk">
+                          
                             <h2>Vores historie</h2>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ullam nostrum, vero in molestiae porro? Molestias illo autem earum. Illo alias adipisci nam hic assumenda excepturi ea debitis dolores. Consequatur.</p>
-                            <div class="butt">
+                            
                                 <div class="button">
                                   <a
                                     href="https://xd.adobe.com/view/58bcd6f5-d2d6-4be2-b775-a5edb99b587b-0def/screen/26509945-56eb-4d13-b2fc-be1a243f00ec"
                                     >Læs mere</a
                                   >
                                 </div>
-                            </div>
+                            
                         </div>
                 
             </div>
