@@ -27,14 +27,21 @@
       footer {
         margin-top: 1.5rem;
       }
+
+      main {
+        max-width: 100%;
+        margin: 0px;
+      }
+
       @media (min-width: 600px) {
         .section_wrapper1_om {
           display: flex;
-          gap: 2rem;
         }
 
         .element2_om {
           justify-content: center;
+          gap: 2rem;
+          margin: 35px;
         }
 
         .section_wrapper2_om h3 {
@@ -44,10 +51,22 @@
         .element3_om {
           display: flex;
           justify-content: center;
+          gap: 2rem;
+          margin: 35px;
         }
-        .section_wrapper_footer {
+
+        .element4_om {
           display: flex;
-          justify-items: space-evenly;
+          justify-content: center;
+          gap: 2rem;
+          margin: 35px;
+        }
+
+        .element5_om {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          margin: 35px;
         }
       }
     </style>
@@ -89,7 +108,7 @@
               beatae facilis.
             </p>
           </div>
-          <img src="/billeder/billede6.jpg" alt="Isdisk" />
+          <img src="/is/billeder/baad.jpg" alt="baad" />
         </div>
 
         <!-- Billedgrid -->
@@ -100,18 +119,7 @@
             <p>@KoebenIs</p>
           </div>
           <div class="element3_om">
-            <img src="/billeder/billede5.jpg" alt="Is" />
-            <img src="/billeder/billede8.jpg" alt="Is" />
-            <img src="/billeder/baad.jpg" alt="Båd" />
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- Footer med kontakt, adresse og SOME -->
-    <footer>
-      <section>
-        <div class="section_wrapper_footer">
-          <div>
+            <img src="/is/billeder/by_is.jpg" alt="by_is" />
             <h3>Kontakt os</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit
@@ -120,7 +128,9 @@
               eligendi similique a optio.
             </p>
           </div>
-          <div>
+
+          <div class="element4_om">
+            <img src="/is/billeder/chokoplante.jpg" alt="chokoplante" />
             <h3>Find os</h3>
             <i class="fa-solid fa-location-dot"></i>
             <p>
@@ -130,14 +140,17 @@
               veritatis labore iste. Eaque, saepe!
             </p>
           </div>
-          <div>
+
+          <div class="element5_om">
+            <img src="/is/billeder/cph.jpg" alt="cph" />
             <h3>Følg os</h3>
             <i class="fa-brands fa-instagram fa-2x"></i>
             <i class="fa-brands fa-facebook-f fa-2x"></i>
           </div>
         </div>
       </section>
-    </footer>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
