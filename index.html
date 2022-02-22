@@ -43,16 +43,18 @@
             
         }
 
+        .section_wrapper_forside2 p{
+          margin-bottom: 2.5rem;
+        }
+
         /* Button styling på forside (links i button, derfor er de lavet med div+class) */
 .button {
   background-color: #93bf50; /* Green darker */
   border: none;
-  color: white;
   padding: 1rem 3rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   cursor: pointer;
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
@@ -63,8 +65,10 @@
 
 .button a {
   text-decoration: none;
-  color: black;
+  color:white;
   cursor: pointer;
+  font-size: 16px;
+  
 }
 
 /* Web version */
@@ -72,12 +76,21 @@
 
         /* section 2 "vores is" + "vores historie" */
         .section_wrapper_forside1{
-            display: grid;
+          display: flex;
+          justify-content: center;
+          
+            /* display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 2rem; */
+           
         }
         .section_wrapper_forside1 img{
           width: 75%;
+          height: 85vh;
+        }
+
+        .section_wrapper_forside1 .col_1, .section_wrapper_forside1 .col_2{
+          margin: 3.125rem;
         }
 
 
