@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
+    <!--Modalvindue-->
     <aside id="modal">
       <article>
         <img src="" alt="" />
@@ -18,8 +19,9 @@
         <p></p>
       </article>
     </aside>
+    <!--Template til et enkelt is-element som vi kloner i JS-->
     <template>
-      <article>
+      <article class="is_article">
         <img src="is/" alt="" />
         <div>
           <h2 class="isnavn"></h2>
@@ -33,7 +35,7 @@
     <header>
       <div class="logo_wrapper">
         <div class="logo">
-          <a href="index.html"><img src="billeder/logo.svg" alt="" /></a>
+          <a href="index.html"><img src="billeder/logo_ny.svg" alt="" /></a>
         </div>
       </div>
 
@@ -50,18 +52,44 @@
     </header>
 
     <main>
-      <div class="filtermenu">
-        <nav>
-          <button class="filter" data-isen="alle">Alle is</button>
-          <button class="filter" data-isen="Sorbet">Sorbet</button>
-          <button class="filter" data-isen="Flødeis*">Flødeis</button>
-          <button class="filter" data-isen="Softice">Softice</button>
-        </nav>
+      <section class="knap_container">
+        <div class="filtermenu">
+          <h2 class="type">Alle is</h2>
+          <p>Alle vores is er lavet på lækre veganske råvarer</p>
+          <nav>
+            <button class="filter" data-isen="alle">Alle is</button>
+            <button class="filter" data-isen="Sorbet">Sorbet</button>
+            <button class="filter" data-isen="Flødeis*">Flødeis</button>
+            <button class="filter" data-isen="Softice">Softice</button>
+          </nav>
+        </div>
+      </section>
+      <div class="flex_container">
+        <section class="is_container"></section>
       </div>
-      <h1 class="type"></h1>
-      <section class="is_container"></section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer_1">
+        <h3>Kontakt os her</h3>
+        <br />
+        <p>Koebenis@mail.dk</p>
+        <br />
+        Tlf: 12345678
+      </div>
+      <div class="footer_2">
+        <h3>Find os her</h3>
+        <br />
+        <p>Guldbergsgade 92</p>
+        <br />
+        <p>2200 Nørrebro</p>
+      </div>
+      <div class="footer_3">
+        <h3>Følg os her</h3>
+        <a href="https://da.wikipedia.org/wiki/Is"
+          ><img src="billeder/instagram.png" alt=""
+        /></a>
+      </div>
+    </footer>
     <script>
       let is;
       let modal = document.querySelector("#modal");
@@ -132,7 +160,11 @@
 
       // Hvordan får jeg elementerne i forskellig størrelse til at lægge sig på en lige linje i bunden?
       // Hvordan får jeg mit modal til at se bedre ud?
-      //
+      // tilføj kommentarer til JS og resten
+      // screenshots af JSON til processdokumentation (få en JSONviewer)
+      // mere processsokumentation GENERALT
+
+      // Umiddelbar vejledning: is i forskellige størrelser,
     </script>
     <script src="script.js"></script>
   </body>

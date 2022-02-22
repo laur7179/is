@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f7f5f5;
+}
+
 img {
   width: 100%;
 }
@@ -35,6 +39,22 @@ header a {
 .logo_wrapper {
   display: flex;
   justify-content: center;
+}
+
+/* button styling */
+button {
+  background-color: #93bf50; /* Green darker */
+  border: none;
+  color: white;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:focus {
+  background-color: #bcdd7b; /* Green lighter */
 }
 
 /*
@@ -88,3 +108,26 @@ header a {
   */
 
 /* push test */
+
+footer {
+  /*
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #efefef;
+  padding: 4rem;
+  margin-top: 4rem;
+  */
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  margin-top: 4rem;
+  background-color: #efefef;
+}
+.footer_3 {
+  text-align: center;
+}
+
+footer img {
+  max-width: 64px;
+  padding-top: 10px;
+}
