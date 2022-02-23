@@ -5,6 +5,20 @@
   box-sizing: border-box;
 }
 
+/* FONTS */
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
 main {
   margin: 1.25rem;
 }
@@ -34,6 +48,7 @@ header a {
   color: black;
   cursor: pointer;
   text-decoration: underline;
+  font-family: "Montserrat", sans-serif;
 }
 
 .logo {
@@ -56,6 +71,7 @@ button {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  font-family: "Roboto";
 }
 button:focus {
   background-color: #bcdd7b; /* Green lighter */
@@ -63,6 +79,14 @@ button:focus {
 
 button:active {
   background-color: #bcdd7b; /* Green lighter */
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto";
 }
 
 section {
