@@ -18,16 +18,22 @@
     <!--Modalvindue-->
     <aside id="modal">
       <article>
-        <div class="modal_flex">
+        <div class="logo_container">
           <img class="modal_logo" src="" alt="" />
         </div>
-        <img class="modal_is" src="" alt="" />
-        <div class="modal text">
-          <h2 class="modal_navn"></h2>
-          <p class="modal_beskrivelse"></p>
-          <p class="modal_fundament"></p>
-          <p class="modal_type"></p>
-          <p class="modal_note"></p>
+        <div class="modal_grid">
+          <div class="is_flex">
+            <img class="modal_is" src="" alt="" />
+          </div>
+          <div class="txt_container">
+            <h2 class="modal_navn"></h2>
+            <p class="modal_beskrivelse"></p>
+            <p class="modal_type"></p>
+            <p class="modal_fundament"></p>
+            <p class="modal_note"></p>
+            <br />
+            <button>Tilbage</button>
+          </div>
         </div>
       </article>
     </aside>
@@ -164,7 +170,8 @@
         modal.querySelector(".modal_logo").src = "billeder/logo.png";
         modal.querySelector(".modal_beskrivelse").textContent =
           isen.beskrivelse;
-        modal.querySelector(".modal_fundament").textContent = isen.fundament;
+        modal.querySelector(".modal_fundament").textContent =
+          "Lavet på " + isen.fundament;
         modal.querySelector(".modal_type").textContent = isen.type;
         modal.style.display = "block";
         if (isen.type == "Flødeis*") {
