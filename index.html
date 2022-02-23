@@ -14,6 +14,7 @@
         img {
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 * {
   margin: 0;
@@ -34,10 +35,11 @@
 
 
 /* Section 3 */
-        /* Placering af billeder og tekst i center af flex-elementet (colonne aka. .col) */
+        /* Placering af billeder og tekst i center af flex-elementet (colonne aka. .col)*/ 
       .section_wrapper_forside2 .col_1, .section_wrapper_forside2 .col_2, .section_wrapper_forside2 .col_3{
             display: grid;
             place-items: center;
+            
             
         }
 /* Størrelse på de runde billeder */
@@ -73,39 +75,79 @@
 
 
 /* Web version */
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
         /* section 2 "vores is" + "vores historie" */
         .section_wrapper_forside1{
-          display: flex;
+          
           justify-content: center;
           
-            /* display: grid;
+            display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem; */
+            gap: 2rem; 
+            text-align: center;
            
         }
         .section_wrapper_forside1 img{
           width: 85%;
-          height: 65vh;
+          height: 80vh;
           
         }
 
+        .flex1{
+          display: flex;
+          justify-content: center;
+          
+        }
+
+        .flex2{
+          display: flex;
+          justify-content: center;
+        }
+
+        
+
+        
+
+
+
         .section_wrapper_forside1 .col_1, .section_wrapper_forside1 .col_2{
-          margin: 3.125rem;
+          margin: 2rem;
+          
         }
 
 
-        /* Section 3 - de 3 værdier  */
+         /*Section 3 - de 3 værdier*/  
         .section_wrapper_forside2{
             display: flex;
             flex-direction: row;
             gap: 2rem;
             text-align: center;
+        } 
+
+        /*#section3 .section_wrapper_forside2{
+          display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 35px;
+
         }
+
+        #section3 .col_1 .col_2 .col_3{
+          display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        }
+
+        #section3 img{
+          object-fit: cover;
+        }*/
 
         
       }
+
+      
 
 
     </style>
@@ -135,16 +177,19 @@
         <section id="section_2">
             <div class="section_wrapper_forside1">
                 <div class="col_1">
-                  
+                  <div class="flex1">
                     <img src="/is/billeder_redigeret/udvalg_2.jpg" alt="Isdisk">
+                  </div>
+                    
                  
                     
                     <h2>Vores is</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ullam nostrum, vero in molestiae porro? Molestias illo autem earum. Illo alias adipisci nam hic assumenda excepturi ea debitis dolores. Consequatur.</p>
+                    <p>Alle vores is er lavet på lækre veganske råvarer. <br> <br> Vores is er lavet med økologisk kokosmælk, økologisk rørsukker og ingredienser af højeste kvalitet.
+                    </p>
                     
                         <button>
                           <a
-                            href="https://xd.adobe.com/view/58bcd6f5-d2d6-4be2-b775-a5edb99b587b-0def/screen/26509945-56eb-4d13-b2fc-be1a243f00ec"
+                            href="menu.html"
                             >Se alle vores is</a
                           >
                         </button>
@@ -152,14 +197,17 @@
                 </div>
                         <div class="col_2">
                           
-                            <img src="/is/billeder_redigeret/baad.jpg" alt="baad">
+                            <div class="flex2">
+                              <img src="/is/billeder_redigeret/baad.jpg" alt="baad">
+
+                            </div>
                           
                             <h2>Vores historie</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ullam nostrum, vero in molestiae porro? Molestias illo autem earum. Illo alias adipisci nam hic assumenda excepturi ea debitis dolores. Consequatur.</p>
+                            <p>Køben is er en plantebaseret isbutik grundlagt i København i 2022. <br> <br> Vi stræber efter at gøre verden til et bedre sted, ved at bruge 100 % bæredygtig emballage til vores produkter & undgå madspild for enhver pris! På den måde hjælper vi med at reducere spild og skabe opmærksomhed.  </p>
                             
                                 <button>
                                   <a
-                                    href="https://xd.adobe.com/view/58bcd6f5-d2d6-4be2-b775-a5edb99b587b-0def/screen/26509945-56eb-4d13-b2fc-be1a243f00ec"
+                                    href="om.html"
                                     >Læs mere</a
                                   >
                                </button>
@@ -183,10 +231,10 @@
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia. </p>
 </div>
 <div class="col_3">
-    <img src="/is/billeder_redigeret/chokolade_stykker.jpg" width="300"
+    <img src="/is/billeder_redigeret/chokolade_stykker.jpg" width="200"
                 height="200" alt="Chokolade">
-    <h2>Smagsoplevelse</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia.</p>
+    <h2>Giv Køben-is i gave!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid debitis laborum amet dolorum neque reprehenderit  </p>
 </div>
             </div>
         </section>
