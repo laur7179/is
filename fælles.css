@@ -33,6 +33,7 @@ header a {
   text-decoration: none;
   color: black;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .logo {
@@ -57,6 +58,10 @@ button {
   cursor: pointer;
 }
 button:focus {
+  background-color: #bcdd7b; /* Green lighter */
+}
+
+button:active {
   background-color: #bcdd7b; /* Green lighter */
 }
 
