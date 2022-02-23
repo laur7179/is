@@ -1,244 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hjem</title>
-    <link rel="stylesheet" href="fælles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="fælles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigationsmenu -->
 
-    <style>
-        img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-* {
-  margin: 0;
-  padding: 0;
-  gap: 0;
-  box-sizing: border-box;
-}
-
-/* Splashbillede */
-        #section_1{
-            width: 100%;
-  height: 100vh;
-  background-image: url(/is/billeder_redigeret/forside.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center
-        }
-
-
-/* Section 3 */
-        /* Placering af billeder og tekst i center af flex-elementet (colonne aka. .col)*/ 
-      .section_wrapper_forside2 .col_1, .section_wrapper_forside2 .col_2, .section_wrapper_forside2 .col_3{
-            display: grid;
-            place-items: center;
-            
-            
-        }
-/* Størrelse på de runde billeder */
-        .section_wrapper_forside2 img{
-            width: 62%;
-            border-radius: 50%;
-        }
-
-        .section_wrapper_forside2 p{
-          margin-bottom: 2.5rem;
-        }
-
-        /* Button styling på forside (links i button, derfor er de lavet med div+class) */
-
-/*
-        .button {
-  background-color: #93bf50; 
-  border: none;
-  padding: 1rem 3rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  margin-bottom: 1.25rem;
-  margin-top: 1.25rem;
-}
-.button:focus {
-  background-color: #bcdd7b; 
-}
-*/
-
-
-
-
-/* Web version */
-@media (min-width: 700px) {
-
-        /* section 2 "vores is" + "vores historie" */
-        .section_wrapper_forside1{
-          
-          justify-content: center;
-          
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem; 
-            text-align: center;
-           
-        }
-        .section_wrapper_forside1 img{
-          width: 85%;
-          height: 80vh;
-          
-        }
-
-        .flex1{
-          display: flex;
-          justify-content: center;
-          
-        }
-
-        .flex2{
-          display: flex;
-          justify-content: center;
-        }
-
-        
-
-        
-
-
-
-        .section_wrapper_forside1 .col_1, .section_wrapper_forside1 .col_2{
-          margin: 2rem;
-          
-        }
-
-
-         /*Section 3 - de 3 værdier*/  
-        .section_wrapper_forside2{
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
-            text-align: center;
-        } 
-
-        /*#section3 .section_wrapper_forside2{
-          display: grid;
-    
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin: 35px;
-
-        }
-
-        #section3 .col_1 .col_2 .col_3{
-          display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-        }
-
-        #section3 img{
-          object-fit: cover;
-        }*/
-
-        
-      }
-
-      
-
-
-    </style>
-</head>
-<body>
-  <header>
-    <div class="logo_wrapper">
-      <div class="logo">
-        <a href="index.html"><img src="billeder/logo_ny.svg" alt="" /></a>
+    <header>
+      <div class="logo_wrapper">
+        <div class="logo">
+          <a href="index.html"><img src="billeder/logo_ny.svg" alt="" /></a>
+        </div>
       </div>
-    </div>
 
-    <nav>
-      <ul class="menu">
-        <li class="nav-item"><a href="menu.html">Vores is</a></li>
-        <li class="nav-item"><a href="om.html">Om os</a></li>
-        <li class="nav-item">
-          <a href="priser.html">Vores priser</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <ul class="menu">
+          <li class="nav-item"><a href="menu.html">Vores is</a></li>
+          <li class="nav-item"><a href="om.html">Om os</a></li>
+          <li class="nav-item">
+            <a href="priser.html">Vores priser</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-        <section id="section_1"></section>
-        <section id="section_2">
-            <div class="section_wrapper_forside1">
-                <div class="col_1">
-                  <div class="flex1">
-                    <img src="/is/billeder_redigeret/udvalg_2.jpg" alt="Isdisk">
-                  </div>
-                    
-                 
-                    
-                    <h2>Vores is</h2>
-                    <p>Alle vores is er lavet på lækre veganske råvarer. <br> <br> Vores is er lavet med økologisk kokosmælk, økologisk rørsukker og ingredienser af højeste kvalitet.
-                    </p>
-                    
-                        <button>
-                          <a
-                            href="menu.html"
-                            >Se alle vores is</a
-                          >
-                        </button>
-                    
-                </div>
-                        <div class="col_2">
-                          
-                            <div class="flex2">
-                              <img src="/is/billeder_redigeret/baad.jpg" alt="baad">
+      <!-- spalshbillede (css) -->
+      <section id="section_1"></section>
+      <!-- ------------- -->
+      <section id="section_2">
+        <div class="section_wrapper">
+          <div class="col_1">
+            <div class="image1">
+              <img src="/is/billeder_redigeret/udvalg_2.jpg" alt="is" />
+            </div>
+            <h2>Vores is</h2>
+            <p>
+              Alle vores is er lavet på lækre veganske råvarer. <br />
+              <br />
+              Vores is er lavet med økologisk kokosmælk, økologisk rørsukker og
+              ingredienser af højeste kvalitet.
+            </p>
+            <button><a href="menu.html">Se alle vores is</a></button>
+          </div>
 
-                            </div>
-                          
-                            <h2>Vores historie</h2>
-                            <p>Køben is er en plantebaseret isbutik grundlagt i København i 2022. <br> <br> Vi stræber efter at gøre verden til et bedre sted, ved at bruge 100 % bæredygtig emballage til vores produkter & undgå madspild for enhver pris! På den måde hjælper vi med at reducere spild og skabe opmærksomhed.  </p>
-                            
-                                <button>
-                                  <a
-                                    href="om.html"
-                                    >Læs mere</a
-                                  >
-                               </button>
-                            
-                        </div>
-                
+          <div class="col_2">
+            <div class="image2">
+              <img src="/is/billeder_redigeret/baad.jpg" alt="København" />
             </div>
-        </section>
-        <section id="section_3">
-            <div class="section_wrapper_forside2">
-<div class="col_1">
-    <img src="/is/billeder_redigeret/kakao.jpg" width="200"
-                height="200" alt="Kakaoplante">
-    <h2>Fairtade</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia.</p>
-</div>
-<div class="col_2">
-    <img src="/is/billeder_redigeret/kokos.jpg" width="200"
-                height="200" alt="Kokosnød">
-    <h2>Naturlig smag</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia. </p>
-</div>
-<div class="col_3">
-    <img src="/is/billeder_redigeret/chokolade_stykker.jpg" width="200"
-                height="200" alt="Chokolade">
-    <h2>Giv Køben-is i gave!</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid debitis laborum amet dolorum neque reprehenderit  </p>
-</div>
+            <h2>Vores historie</h2>
+            <p>
+              Køben is er en plantebaseret isbutik grundlagt i København i 2022.
+              <br />
+              <br />
+              Vi stræber efter at gøre verden til et bedre sted, ved at bruge
+              100 % bæredygtig emballage til vores produkter & undgå madspild
+              for enhver pris! På den måde hjælper vi med at reducere spild og
+              skabe opmærksomhed.
+            </p>
+            <button><a href="om.html">Læs mere</a></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="section_3">
+        <div class="section_wrapper">
+          <div class="col_1">
+            <div class="image1">
+              <img src="/is/billeder_redigeret/kakao.jpg" alt="kakaoplante" />
             </div>
-        </section>
+            <h2>Fairtrade</h2>
+            <p>
+              Fairtrade blev sat i verden for at mindske global fattigdom ved at
+              gøre handel mere fair og sikre en bedre betaling til bønder og
+              arbejdere i nogle af verdens fattigste lande. Der findes 1,7
+              millioner bønder og arbejdere i Fairtrade-systemet, der dyrker og
+              producerer mere end 300 forskellige råvarer.
+            </p>
+          </div>
+
+          <div class="col_2">
+            <div class="image2">
+              <img src="/is/billeder_redigeret/kokos.jpg" alt="kokosnød" />
+            </div>
+            <h2>Bedste råvare</h2>
+            <p>
+              Vores is er lavet med økologisk kokosmælk, økologisk rørsukker og
+              ingredienser af højeste kvalitet. Ved at bruge de bedste
+              økologiske og fairtrade råvarer er vi i stand til at producere
+              plantebaseret is med fantastisk smag.
+            </p>
+          </div>
+
+          <div class="col_3">
+            <div class="image3">
+              <img
+                src="/is/billeder_redigeret/chokolade_stykker.jpg"
+                alt="chokolade_stykker"
+              />
+            </div>
+            <h2>Giv Køben-is i gave!</h2>
+            <p>
+              Den bedste måde at gøre nogen glad på er at give dem is - så
+              hvorfor ikke forkæle dine venner og familie med et gavekort til
+              Køben-is København! <br /><br />
+              Besøg en af vore butikker for at købe din gave!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer>
       <div class="footer_1">
         <h3>Kontakt os her</h3>
@@ -261,14 +144,6 @@
         /></a>
       </div>
     </footer>
-    
-</body>
-</html>
-
-
-
-
-
-    <script src="script.js"></script>
   </body>
+  <script src="script.js"></script>
 </html>

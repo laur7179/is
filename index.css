@@ -1,0 +1,87 @@
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  box-sizing: border-box;
+}
+
+/* Splashbillede */
+#section_1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/is/billeder_redigeret/forside.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#section_2 .section_wrapper .col_1 {
+  margin-bottom: 5rem;
+}
+
+#section_2 .section_wrapper .col_2 {
+  margin-bottom: 5rem;
+}
+
+#section_3 .section_wrapper img {
+  border-radius: 50%;
+  width: 65%;
+  height: 20vh;
+}
+
+/* Web version */
+@media (min-width: 700px) {
+  /* section 2 */
+  #section_2 .section_wrapper {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  #section_2 .section_wrapper img {
+    width: 85%;
+    height: 80vh;
+  }
+
+  #section_2 .image1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #section_2 .image2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Section 3 */
+  #section_3 .section_wrapper {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  #section_3 .image1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #section_3 .image2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #section_3 .image3 {
+    display: flex;
+    justify-content: center;
+  }
+}
