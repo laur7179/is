@@ -7,16 +7,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="fælles.css" />
     <link rel="stylesheet" href="menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!--Modalvindue-->
     <aside id="modal">
       <article>
-        <img src="" alt="" />
-        <h2></h2>
-        <p class="modal"></p>
-        <p></p>
-        <p></p>
+        <div class="modal_flex">
+          <img class="modal_logo" src="" alt="" />
+        </div>
+        <img class="modal_is" src="" alt="" />
+        <div class="modal text">
+          <h2 class="modal_navn"></h2>
+          <p class="modal_beskrivelse"></p>
+          <p class="modal_fundament"></p>
+          <p class="modal_type"></p>
+          <p class="modal_note"></p>
+        </div>
       </article>
     </aside>
     <!--Template til et enkelt is-element som vi kloner i JS-->
@@ -148,9 +160,20 @@
       function showDetails(isen) {
         console.log(isen);
         modal.querySelector("h2").textContent = isen.smag;
-        modal.querySelector("img").src = billedeUrl + isen.billede;
-        modal.querySelector("p").textContent = isen.beskrivelse;
+        modal.querySelector(".modal_is").src = billedeUrl + isen.billede;
+        modal.querySelector(".modal_logo").src = "billeder/logo.png";
+        modal.querySelector(".modal_beskrivelse").textContent =
+          isen.beskrivelse;
+        modal.querySelector(".modal_fundament").textContent = isen.fundament;
+        modal.querySelector(".modal_type").textContent = isen.type;
         modal.style.display = "block";
+        if (isen.type == "Flødeis*") {
+          modal.querySelector(".modal_note").textContent =
+            "Alt flødeis er lavet på plantemælk";
+        }
+        if (isen.type != "Flødeis*") {
+          modal.querySelector(".modal_note").textContent = "";
+        }
       }
 
       modal.addEventListener("click", () => (modal.style.display = "none"));
