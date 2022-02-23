@@ -7,50 +7,7 @@
     <title>Om KøbenIs</title>
     <!-- CSS link -->
     <link rel="stylesheet" href="fælles.css" />
-
-    <!-- Font-awesome linke -->
-    <script
-      src="https://kit.fontawesome.com/e076e3f476.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- CSS STYLE -->
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      .element2_om {
-        display: flex;
-        align-content: space-around;
-      }
-
-      footer {
-        margin-top: 1.5rem;
-      }
-      @media (min-width: 600px) {
-        .section_wrapper1_om {
-          display: flex;
-          gap: 2rem;
-        }
-
-        .element2_om {
-          justify-content: center;
-        }
-
-        .section_wrapper2_om h3 {
-          text-align: center;
-        }
-
-        .element3_om {
-          display: flex;
-          justify-content: center;
-        }
-        .section_wrapper_footer {
-          display: flex;
-          justify-items: space-evenly;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="om.css" />
   </head>
   <body>
     <!-- Navigationsmenu -->
@@ -74,70 +31,71 @@
       </nav>
     </header>
 
-    <!-- Main med alt indhold, såsom billeder samt tekst -->
     <main>
-      <!-- Section 1, informationsgivende tekst om KøbenIs' historie og opstandelse -->
-      <section id="section1_om">
-        <div class="section_wrapper1_om">
-          <div class="element1_om">
-            <h2>Hvem er KøbenIs?</h2>
-            <h3>Iselskere med hjertet på rette sted</h3>
+      <section id="element1">
+        <div class="section_wrapper">
+          <div class="om_os1">
+            <img src="/is/billeder/baad.jpg" alt="baad" />
+          </div>
+
+          <!-- Titel -->
+          <div class="om_os2">
+            <h3>Hvem er vi?</h3>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              vitae laborum soluta id obcaecati iure aliquid pariatur nisi,
-              eligendi non porro aliquam velit nihil atque dolores est, optio
-              beatae facilis.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry’s standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
             </p>
           </div>
-          <img src="/billeder/billede6.jpg" alt="Isdisk" />
         </div>
+      </section>
 
-        <!-- Billedgrid -->
-        <div class="section_wrapper2_om">
-          <h3>Følg med os på Instagram</h3>
-          <div class="element2_om">
-            <i class="fa-brands fa-instagram fa-2x"></i>
-            <p>@KoebenIs</p>
+      <section id="element2">
+        <div class="section_wrapper">
+          <div class="om_os3">
+            <img src="/is/billeder/kokos1.jpg" alt="kokos1" />
           </div>
-          <div class="element3_om">
-            <img src="/billeder/billede5.jpg" alt="Is" />
-            <img src="/billeder/billede8.jpg" alt="Is" />
-            <img src="/billeder/baad.jpg" alt="Båd" />
+          <div class="om_os4">
+            <img src="/is/billeder/chokostykker.jpg" alt="chokostykker" />
+          </div>
+          <div class="om_os5">
+            <img src="/is/billeder/cph.jpg" alt="cph" />
           </div>
         </div>
       </section>
     </main>
-    <!-- Footer med kontakt, adresse og SOME -->
+
     <footer>
-      <section>
-        <div class="section_wrapper_footer">
-          <div>
-            <h3>Kontakt os</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit
-              iste facere pariatur ex autem dolore placeat, architecto harum
-              possimus reprehenderit eius laborum tempore consectetur cumque
-              eligendi similique a optio.
-            </p>
-          </div>
-          <div>
-            <h3>Find os</h3>
-            <i class="fa-solid fa-location-dot"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis vitae quaerat at saepe, rerum suscipit consectetur
-              odit maiores sit pariatur eum officia praesentium asperiores culpa
-              veritatis labore iste. Eaque, saepe!
-            </p>
-          </div>
-          <div>
-            <h3>Følg os</h3>
-            <i class="fa-brands fa-instagram fa-2x"></i>
-            <i class="fa-brands fa-facebook-f fa-2x"></i>
-          </div>
-        </div>
-      </section>
+      <div class="footer_1">
+        <h3>Kontakt os her</h3>
+        <br />
+        <p>Koebenis@mail.dk</p>
+        <br />
+        Tlf: 12345678
+      </div>
+      <div class="footer_2">
+        <h3>Find os her</h3>
+        <br />
+        <p>Guldbergsgade 92</p>
+        <br />
+        <p>2200 Nørrebro</p>
+      </div>
+      <div class="footer_3">
+        <h3>Følg os her</h3>
+        <a href="https://da.wikipedia.org/wiki/Is"
+          ><img src="billeder/instagram.png" alt=""
+        /></a>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

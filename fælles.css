@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+main {
+  margin: 1.25rem;
+}
 body {
   background-color: #f7f5f5;
 }
@@ -55,6 +58,19 @@ button {
 }
 button:focus {
   background-color: #bcdd7b; /* Green lighter */
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin-top: 1.25rem;
+}
+
+p {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 /*

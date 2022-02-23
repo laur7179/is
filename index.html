@@ -1,67 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjem</title>
     <link rel="stylesheet" href="fælles.css">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="section1">
-      <header>
-        <div class="logo_wrapper">
-          <div class="logo">
-            <a href="index.html"><img src="billeder/logo_ny.svg" alt="" /></a>
-          </div>
-        </div>
-  
-        <nav>
-          <ul class="menu">
-            <li class="nav-item"><a href="menu.html">Vores is</a></li>
-            <li class="nav-item"><a href="om.html">Om KøbenIs</a></li>
-            <li class="nav-item">
-              <a href="priser.html"
-                >Vores priser</a
-              >
-            </li>
-            <li class="nav-item"><a href="produktion.html">Produktion</a></li>
-          </ul>
-        </nav>
-      </header>
 
-      <div class="splash">
-        <img src="billeder/splashp.jpg" alt="splash" />
+    <style>
+        img {
+  width: 100%;
+  display: block;
+}
+* {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  box-sizing: border-box;
+}
+
+/* Splashbillede */
+        #section_1{
+            width: 100%;
+  height: 100vh;
+  background-image: url(billeder/splash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
+        }
+
+
+/* Section 3 */
+        /* Placering af billeder og tekst i center af flex-elementet (colonne aka. .col) */
+      .section_wrapper_forside2 .col_1, .section_wrapper_forside2 .col_2, .section_wrapper_forside2 .col_3{
+            display: grid;
+            place-items: center;
+            
+        }
+/* Størrelse på de runde billeder */
+        .section_wrapper_forside2 img{
+            width: 50%;
+            
+        }
+
+        .section_wrapper_forside2 p{
+          margin-bottom: 2.5rem;
+        }
+
+        /* Button styling på forside (links i button, derfor er de lavet med div+class) */
+.button {
+  background-color: #93bf50; /* Green darker */
+  border: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+.button:focus {
+  background-color: #bcdd7b; /* Green lighter */
+}
+
+.button a {
+  text-decoration: none;
+  color:white;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+/* Web version */
+@media (min-width: 600px) {
+
+        /* section 2 "vores is" + "vores historie" */
+        .section_wrapper_forside1{
+          display: flex;
+          justify-content: center;
+          
+            /* display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem; */
+           
+        }
+        .section_wrapper_forside1 img{
+          width: 75%;
+          height: 85vh;
+        }
+
+        .section_wrapper_forside1 .col_1, .section_wrapper_forside1 .col_2{
+          margin: 3.125rem;
+        }
+
+
+        /* Section 3 - de 3 værdier  */
+        .section_wrapper_forside2{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+        
+      }
+
+
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo_wrapper">
+      <div class="logo">
+        <a href="index.html"><img src="billeder/logo_ny.svg" alt="" /></a>
       </div>
     </div>
 
-    <div class="kolonne">
-        <div class="div1">
-          <a href="index.html">
-            <img src="billeder/splashp.jpg" alt="billede1" />
+    <nav>
+      <ul class="menu">
+        <li class="nav-item"><a href="menu.html">Vores is</a></li>
+        <li class="nav-item"><a href="om.html">Om KøbenIs</a></li>
+        <li class="nav-item">
+          <a href="priser.html">Vores priser</a>
+        </li>
+        <li class="nav-item"><a href="produktion.html">Produktion</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <div class="text1">
-              <h3>VORES IS</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore repellat nihil vero labore soluta placeat aliquid quaerat, cumque quas voluptas deserunt necessitatibus ab sunt eius odio quidem tempore aspernatur numquam?</p>
+    <main>
+        <section id="section_1"></section>
+        <section id="section_2">
+            <div class="section_wrapper_forside1">
+                <div class="col_1">
+                  
+                    <img src="billeder/voresis.jpg" alt="Isdisk">
+                 
+                    
+                    <h2>Vores is</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ullam nostrum, vero in molestiae porro? Molestias illo autem earum. Illo alias adipisci nam hic assumenda excepturi ea debitis dolores. Consequatur.</p>
+                    
+                        <div class="button">
+                          <a
+                            href="https://xd.adobe.com/view/58bcd6f5-d2d6-4be2-b775-a5edb99b587b-0def/screen/26509945-56eb-4d13-b2fc-be1a243f00ec"
+                            >Se alle vores is</a
+                          >
+                        </div>
+                    
+                </div>
+                        <div class="col_2">
+                          
+                            <img src="billeder/voresis.jpg" alt="Isdisk">
+                          
+                            <h2>Vores historie</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ullam nostrum, vero in molestiae porro? Molestias illo autem earum. Illo alias adipisci nam hic assumenda excepturi ea debitis dolores. Consequatur.</p>
+                            
+                                <div class="button">
+                                  <a
+                                    href="https://xd.adobe.com/view/58bcd6f5-d2d6-4be2-b775-a5edb99b587b-0def/screen/26509945-56eb-4d13-b2fc-be1a243f00ec"
+                                    >Læs mere</a
+                                  >
+                                </div>
+                            
+                        </div>
+                
             </div>
-
-            <button>SE ALLE IS</button>
-          </a>
-        </div>
-
-        <div class="div1">
-            <a href="index.html">
-              <img src="billeder/splashp.jpg" alt="billede1" />
-  
-              <div class="text1">
-                <h3>VORES HISTORIE</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex necessitatibus sequi animi totam ratione. Repellendus, rerum necessitatibus! Cupiditate, accusamus minus nihil magnam quasi eum dolore accusantium voluptatibus eveniet facilis.</p>
-              </div>
-
-              <button>SE MERE</button>
-            </a>
-          </div>
+        </section>
+        <section id="section_3">
+            <div class="section_wrapper_forside2">
+<div class="col_1">
+    <img src="/billeder/1.png" alt="Kakaoplante">
+    <h2>Fairtade</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia.</p>
+</div>
+<div class="col_2">
+    <img src="/billeder/3.png" alt="Kokosnød">
+    <h2>Naturlig smag</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia. </p>
+</div>
+<div class="col_3">
+    <img src="/billeder/2.png" alt="Chokolade">
+    <h2>Smagsoplevelse</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi id, rem voluptates praesentium sequi nobis officia.</p>
+</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+      <div class="footer_1">
+        <h3>Kontakt os her</h3>
+        <br />
+        <p>Koebenis@mail.dk</p>
+        <br />
+        Tlf: 12345678
+      </div>
+      <div class="footer_2">
+        <h3>Find os her</h3>
+        <br />
+        <p>Guldbergsgade 92</p>
+        <br />
+        <p>2200 Nørrebro</p>
+      </div>
+      <div class="footer_3">
+        <h3>Følg os her</h3>
+        <a href="https://da.wikipedia.org/wiki/Is"
+          ><img src="billeder/instagram.png" alt=""
+        /></a>
+      </div>
+    </footer>
+    
+</body>
+</html>
 
 
 
