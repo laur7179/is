@@ -81,9 +81,8 @@
           </nav>
         </div>
       </section>
-      <div class="flex_container">
-        <section class="is_container"></section>
-      </div>
+
+      <section class="is_container"></section>
     </main>
     <footer>
       <div class="footer_1">
@@ -91,7 +90,7 @@
         <br />
         <p>Koebenis@mail.dk</p>
         <br />
-        Tlf: 12345678
+        <p>Tlf: 22270731</p>
       </div>
       <div class="footer_2">
         <h3>Find os her</h3>
@@ -108,6 +107,7 @@
       </div>
     </footer>
     <script>
+      // Variabler
       let is;
       let modal = document.querySelector("#modal");
       let billedeUrl = "is/";
@@ -117,6 +117,7 @@
       const key = "620f7cb134fd6215658587c5";
       let filterIs = "alle";
 
+      // Her henter vi JSON fra vores database og i bunden er der to funktioner vi beder om at løbe showIce og addBtn
       async function getJson() {
         const data = await fetch(dbUrl, {
           method: "GET",
@@ -132,6 +133,7 @@
         addBtn();
       }
 
+      // showIce er den funktion der tilføjer vores JSON til dommen vied hjælp af kloning af en template.
       function showIce() {
         container.innerHTML = "";
         is.forEach((isen) => {
@@ -150,12 +152,14 @@
         });
       }
 
+      // addBtn tilføjer en eventlistener til alle knapperne i filtermenuen
       function addBtn() {
         document.querySelectorAll(".filtermenu button").forEach((btn) => {
           btn.addEventListener("click", filter);
         });
       }
 
+      // filter jeg forstår ikke det her - men jeg tror at vi løber showIce funktionen igen men udfra et særligt dataset
       function filter() {
         filterIs = this.dataset.isen;
         document.querySelector(".type").textContent = this.textContent;
@@ -163,6 +167,7 @@
         console.log("knap");
       }
 
+      // showDetails er den funktion der er ansvarlig for pop-up vinduet og alt content i forbindelse med det. Desuden har jeg tilføjet et if-statement der viser noget særlig tekst hvis isen er en flødeis.
       function showDetails(isen) {
         console.log(isen);
         modal.querySelector("h2").textContent = isen.smag;
@@ -182,7 +187,7 @@
           modal.querySelector(".modal_note").textContent = "";
         }
       }
-
+      // får pop-uppen til at gå væk
       modal.addEventListener("click", () => (modal.style.display = "none"));
 
       getJson();

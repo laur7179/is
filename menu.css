@@ -33,27 +33,19 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 1rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  min-height: 400px;
 }
 
 .is_article img {
-  max-width: 6rem;
+  width: 6rem;
 }
 
 .is_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  justify-content: center;
-  /* text-align: center; /* Teksten er sjovt nok også påvirket */
-  align-items: center;
-  align-content: center;
-
-  /* DET HER VIRKER IKKE */
-  /*
-  margin-left: 10rem;
-  margin-right: 10rem;
-  */
 
   /* Brug det her til responsive margins */
 
@@ -67,6 +59,7 @@
   height: 100vh;
   position: fixed;
   background-color: #00000055;
+  padding-top: 4rem;
 }
 
 #modal article {
