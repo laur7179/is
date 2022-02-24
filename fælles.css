@@ -8,7 +8,12 @@
 /* FONTS */
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  font-weight: 200;
+}
+
+h1 {
+  font-family: "Roboto";
 }
 
 h2 {
@@ -16,6 +21,10 @@ h2 {
 }
 
 h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
   font-family: "Roboto", sans-serif;
 }
 
