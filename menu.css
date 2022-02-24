@@ -36,14 +36,6 @@
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
-
-  text-align: start;
-}
-
-.text_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .is_article img {
@@ -56,7 +48,6 @@
   gap: 1rem;
 
   /* Brug det her til responsive margins */
-
   max-width: 70vw;
   margin: 0 auto;
 }

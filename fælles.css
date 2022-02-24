@@ -10,18 +10,22 @@
 p {
   font-family: "Roboto";
   font-weight: 200;
+  font-size: 1rem;
 }
 
 h1 {
   font-family: "Roboto";
+  font-size: 2rem;
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
 }
 
 h3 {
   font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
 }
 
 h4 {
@@ -70,6 +74,7 @@ header a {
 }
 
 /* button styling */
+
 button {
   background-color: #93bf50; /* Green darker */
   border: none;
@@ -176,6 +181,7 @@ footer {
   padding: 4rem;
   margin-top: 4rem;
   background-color: #efefef;
+  gap: 2rem;
 }
 .footer_3 {
   text-align: center;
@@ -184,4 +190,10 @@ footer {
 footer img {
   max-width: 64px;
   padding-top: 10px;
+}
+
+@media (max-width: 500px) {
+  .footer_3 {
+    display: none;
+  }
 }
