@@ -85,3 +85,21 @@ img {
     justify-content: center;
   }
 }
+
+/* Ipad version */
+@media (min-width: 1000px) {
+  #section_3 .section_wrapper img {
+    border-radius: 50%;
+    width: 75%;
+    height: 35vh;
+  }
+}
+
+#section_2 .section_wrapper p {
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+#section_3 .section_wrapper p {
+  line-height: 1.5rem;
+}
